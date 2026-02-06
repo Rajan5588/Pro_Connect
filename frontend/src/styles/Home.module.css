@@ -1,0 +1,91 @@
+
+.container{
+     font-family: poppins, sans-serif;
+     padding: 1.2rem;
+}
+
+.mainContainer{
+     display:flex;
+     justify-content:center;
+     align-items: center;
+     gap:4rem;
+     padding-inline:2rem;
+     height: 80vh;
+}
+
+.leftContainer{
+     flex:0.5;
+
+}
+.rightContainer{
+     flex:0.5;
+}
+
+.leftContainer>p:nth-child(1){
+font-size: 2.1rem;
+font-weight: bold;
+background: -webkit-linear-gradient(80deg,#000000,#9d9d9d);
+background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: animationHomeBreathEffect 3s linear infinite duration timing-function delay iteration-count direction fill-mode;
+}
+
+@keyframes animationHomeBreathEffect {
+    0%{
+     background-position: 0% 50%;
+    }
+     50%{
+      background-position: 100% 50%;
+     }
+     100%{
+      background-position: 0% 50%;
+     }
+}
+
+.leftContainer>p:nth-child(2){
+color: #4D4D4D;
+font-size: 1.3rem;
+}
+
+.btnjoin{
+     width: fit-content;
+     cursor: pointer;
+     user-select: none;
+     transition: all 0.3s;
+     margin-top: 1rem;
+     font-size: 1.4rem;
+     background: rgb(228, 1, 96);
+     color: white;
+     padding-inline: 1.2rem;
+     padding-block: 0.6rem;
+     border-radius: 20px;
+     
+}
+
+.rightContainer>img{
+     width: 60%;
+     border-radius: 50%;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+
+
+@media screen and (max-width:600px){
+.mainContainer{
+     flex-direction: column;
+     gap: 2rem;
+     padding-top: 1.3rem;
+}
+.leftContainer{
+     flex: 1;
+     padding-top: 1.5rem;
+}
+.rightContainer{
+     flex: 1;
+}
+.rightContainer img{
+     width: 100%;
+}
+
+}

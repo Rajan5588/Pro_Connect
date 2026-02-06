@@ -1,0 +1,183 @@
+.container{
+     padding: 1.3rem;
+     background: rgb(230 ,230,230);
+     display: flex;
+     flex-direction: column;
+     gap: 1.2rem;
+
+}
+.backDropContainer{
+     width: 100%;
+     height: 30vh;
+     background: url("https://images.pexels.com/photos/1021365/pexels-photo-1021365.jpeg");
+     background-size: cover;
+background-repeat: no-repeat;
+position: relative;
+border-radius: 20px;
+
+
+}
+
+
+ .backDropContainer>img{
+     width: 8em;
+     height: 8em;
+     object-fit: cover;
+     border-radius: 50%;
+     position: absolute;
+     bottom: 40%;
+     left: 8%;
+     align-items: center;
+     text-align: center;
+ }
+
+
+ /* .backDropContainer::after{
+      content: '';
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     width: 100%;
+     height: 100%;
+     background: black;
+     z-index: 3;
+ } */
+
+
+ .backDrop_overlay{
+       width: 8em;
+     height: 8em;
+     object-fit: cover;
+     border-radius: 50%;
+     position: absolute;
+     bottom: 40%;
+     left: 8%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+   color: white;
+   font-weight: bold;
+     z-index: 4;
+     opacity: 0.0;
+     transition: all 0.4s;
+  
+ }
+
+ 
+ .backDrop_overlay:hover{
+   opacity: 0.8;
+     background: black;
+     cursor: pointer;
+ }
+.profileContainer_details{
+     padding-top: 0.6rem;
+}
+.card{
+     display: flex;
+     align-items: center;
+     gap: 1.4rem;
+
+}
+
+.backDrop{
+    width: 3.4rem;
+    height: auto;
+    height: 3.4rem;
+    object-fit: cover;
+  
+}
+/* .backDrop::after{
+     content: '';
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     width: 100%;
+     height: 100%;
+     background: black;
+     z-index: 3;
+} */
+
+.connectButton{
+     padding-inline: 0.8rem;
+     padding-block: 0.3rem;
+     border: 10x solid rgba(3,93,183,0.905);
+     outline: none;
+     border: none;
+     border-radius: 10px;
+     cursor: pointer;
+}
+
+
+.connectBtn{
+     padding-inline: 0.8rem;
+     padding-block: 0.3rem;
+background: rgba(3,93,183,0.905);
+     outline: none;
+     border: none;
+     border-radius: 10px;
+     cursor: pointer;
+}
+.workHistoryContainer{
+     display: flex;
+     gap: 1.4rem;
+     padding-top: 1.4rem;
+     width: 100%;
+     flex-wrap: wrap;
+
+
+}
+
+.workHistoryCard{
+     min-width: fit-content;
+     padding-inline: 2.5rem;
+     padding-block: 1rem;
+     border-radius: 10px;
+     box-shadow: 10px 10px 15px rgb(173,173,173);
+}
+
+.profileContainer_details input{
+     outline: none;
+     border-style:none ;
+     padding-inline: 10px;
+     padding-block: 9px;
+     width: fit-content;
+}
+
+.nameEdit{
+     font-size: 1.5rem;
+
+     font-weight: bold;
+}
+
+
+.connetionButton{
+
+     padding-inline: 0.8rem;
+     padding-block: 0.3rem;
+background: rgba(3,93,183,0.905);
+     outline: none;
+     border: none;
+     border-radius: 10px;
+     cursor: pointer;
+     width: fit-content;
+}
+
+.profileContainer_details textarea{
+     outline: none;
+     border:none;
+     padding-inline: 9px;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-size: 1.1rem;
+}
+
+.card_profileContainer{
+     display: flex;
+}
+
+.card_profileContainer>img{
+    width: 3.4rem;
+    height: auto;
+    height: 3.4rem;
+    object-fit: cover;
+}

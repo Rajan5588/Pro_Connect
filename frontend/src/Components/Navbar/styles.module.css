@@ -1,0 +1,31 @@
+.container{
+     font-family: poppins, sans-serif;
+     padding: 1.2rem;
+}
+
+.navBar{
+     display: flex;
+     align-items: center;
+  justify-content: space-between;
+
+
+}
+
+.navRight{
+     display: flex;
+
+}
+
+.buttonjoin{
+     width: fit-content;
+     cursor: pointer;
+     user-select: none;
+     transition: all 0.3s;
+     margin-left: 1rem;
+     font-size: 1.1rem;
+     background: rgb(41, 27, 233);
+     color: white;
+     padding-inline: 1rem;
+     padding-block: 0.5rem;
+     border-radius: 20px;
+}
