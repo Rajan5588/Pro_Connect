@@ -6,15 +6,32 @@ import PDFDocument from "pdfkit";
 import fs from "fs"
 import ConnectionRequest from "../models/connectionModel.js"
 import path from "path";
-const convertUserDataToPDF=(userData)=>{
-     console.log("PDF STARTED");
-console.log("PROFILE PIC 👉", userData.userId.profilePicture);
+const convertUserDataToPDF=async(userData)=>{
+
+
 
      const doc=new PDFDocument();
-      const fileName = crypto.randomBytes(8).toString("hex") + ".pdf";
+      const fileName = crypto.randomBytes(32).toString("hex") + ".pdf";
+//       const stream=fs.createWriteStream("/uploads"+outputPath)
+//       doc.pipe(stream)
+//       doc.image(`/uploads/${userData.userId.profilePicture}`,{align:"center",width:100})
 
+
+//  doc.fontSize(14).text(`Name: ${userData.userId.name}`)
+//      doc.fontSize(14).text(`Username: ${userData.userId.username}`)
+//      doc.fontSize(14).text(`Email: ${userData.userId.email}`)
+//      doc.fontSize(14).text(`Bio: ${userData.bio || "N/A"}`)
+//      doc.fontSize(14).text(`Current Position: ${userData.currentPost|| "N/A"}`)
+
+//      doc.fontSize(14).text(`Past Work: `)
+//      userData.pastWork?.forEach((work,index)=>{
+//           doc.fontSize(12).text(`Company: ${work.company || "N/A"}`)
+//           doc.fontSize(12).text(`Postion: ${work.positon || "N/A"}`)
+//           doc.fontSize(12).text(`Year: ${work.years|| "N/A"}`)
+               
+//       })
   const uploadsDir = path.join(process.cwd(), "uploads");
-  console.log(uploadsDir,"route")
+
   const outputPath = path.join(uploadsDir, fileName);
       if (!fs.existsSync(uploadsDir)) {
     fs.mkdirSync(uploadsDir);
@@ -39,7 +56,7 @@ console.log("PROFILE PIC 👉", userData.userId.profilePicture);
                
      })
      doc.end();
-     console.log(outputPath ,"dfghrk")
+  
      return outputPath;
 
 }
@@ -171,7 +188,7 @@ export const updateProfileData=async(req,res)=>{
   currentPost,
   pastWork,
   education}=req.body
-    console.log(bio,"nhi ho rha hai ");
+
 
           const userProfile=await User.findOne({token})
           if(!userProfile){
@@ -211,8 +228,16 @@ export const downloadProfile=async(req,res)=>{
           const userProfile=await Profile.findOne({userId:user_id}).populate("userId","name username email profilePicture ");
 console.log("USER ID 👉", user_id);
 console.log("PROFILE 👉", userProfile);
-          let outputPath= await convertUserDataToPDF(userProfile); // uper banya hu 
-          return res.json({message:outputPath})
+          let outputPath= await convertUserDataToPDF(userProfile); 
+          // uper banya hu 
+
+            res.setHeader("Content-Type", "application/pdf");
+    res.setHeader(
+      "Content-Disposition",
+      "attachment; filename=profile.pdf"
+    );
+        
+    return res.json({message:outputPath});
      } catch (error) {
           return res.status(500).json({message:error.message})
      }

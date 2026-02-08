@@ -14,14 +14,15 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(cors())
 // Static serve uploads folder
-app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
 
+// app.use(express.static("uploads"));
 const PORT =process.env.PORT || 5000;
 
 
 app.use(userRoutes)
 app.use(postRoutes)
 app.use(express.static("uploads"))
+app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
 
 
 const start=async()=>{

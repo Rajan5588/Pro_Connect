@@ -30,6 +30,4 @@ router.route("/user/getConnectionRequests").get(getMyConnectionRequests)
 router.route("/user/user_connection_requests").get(whatAreMyConnections)
 router.route("/user/accept_connection_request").post(acceptConnectionRequest)
 
-export default router
-
-;
+export default router;
