@@ -2,10 +2,10 @@ import DashboardLayout from "@/Layout/DashboardLayout";
 import UserLayout from "@/Layout/UserLayout";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAboutUser } from "../config/redux/action/authAction";
+import { getAboutUser } from "../../config/redux/action/authAction";
 import styles from "./index.module.css";
-import { Bash_URL, clientServer } from "../config";
-import { getAllPosts } from "../config/redux/action/postAction";
+import { Bash_URL, clientServer } from "../../config";
+import { getAllPosts } from "../../config/redux/action/postAction";
  const profile = () => {
   const dispatch = useDispatch();
 

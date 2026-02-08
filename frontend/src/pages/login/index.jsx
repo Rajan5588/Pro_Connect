@@ -3,8 +3,8 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import styles from './style.module.css'
-import { loginUser, registerUser } from '../config/redux/action/authAction';
-import { emptyMessage } from '../config/redux/reducer/authReducer';
+import { loginUser, registerUser } from '../../config/redux/action/authAction';
+import { emptyMessage } from '../../config/redux/reducer/authReducer';
 
 const loginComponent = () => {
   const authState = useSelector((state) => state.auth);

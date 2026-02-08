@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './styles.module.css'
 import { useRouter } from 'next/router'
 import { useDispatch, useSelector } from 'react-redux'
-import { reset } from '@/pages/config/redux/reducer/authReducer'
+import { reset } from '@/config/redux/reducer/authReducer'
 const Navbar = () => {
      const router=useRouter()
      const dispatch=useDispatch()

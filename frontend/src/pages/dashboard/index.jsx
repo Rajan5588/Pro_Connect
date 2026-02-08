@@ -2,11 +2,11 @@ import DashboardLayout from '@/Layout/DashboardLayout'
 import UserLayout from '@/Layout/UserLayout'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { createPost, deletePost, getAllComments, getAllPosts, incrementPostLike, postComment } from '../config/redux/action/postAction'
-import { getAboutUser, getAllUsers } from '../config/redux/action/authAction'
+import { createPost, deletePost, getAllComments, getAllPosts, incrementPostLike, postComment } from '../../config/redux/action/postAction'
+import { getAboutUser, getAllUsers } from '../../config/redux/action/authAction'
 import styled from "./index.module.css"
-import { Bash_URL } from '../config'
-import { resetPostId } from '../config/redux/reducer/postReducer'
+import { Bash_URL } from '../../config'
+import { resetPostId } from '../../config/redux/reducer/postReducer'
 
 const Dashboard = () => {
 

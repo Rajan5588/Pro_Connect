@@ -1,13 +1,13 @@
 import { useSearchParams } from "next/navigation"
-import { Bash_URL, clientServer } from "../config";
+import { Bash_URL, clientServer } from "../../config";
 import DashboardLayout from "@/Layout/DashboardLayout";
 import UserLayout from "@/Layout/UserLayout";
 import styles from "./index.module.css"
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { getAllPosts } from "../config/redux/action/postAction";
-import { getConnectionRequest, getMyConnectionRequests, sendConnectionRequest } from "../config/redux/action/authAction";
+import { getAllPosts } from "../../config/redux/action/postAction";
+import { getConnectionRequest, getMyConnectionRequests, sendConnectionRequest } from "../../config/redux/action/authAction";
 
 export default function ViewProfilePage({userProfile}){
      const searchParamers=useSearchParams();

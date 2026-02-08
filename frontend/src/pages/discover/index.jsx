@@ -2,8 +2,8 @@ import DashboardLayout from '@/Layout/DashboardLayout'
 import UserLayout from '@/Layout/UserLayout'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getAllUsers } from '../config/redux/action/authAction'
-import { Bash_URL } from '../config'
+import { getAllUsers } from '../../config/redux/action/authAction'
+import { Bash_URL } from '../../config'
 import styles from "./index.module.css"
 import { useRouter } from 'next/router'
 
